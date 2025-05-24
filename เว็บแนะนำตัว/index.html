@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOA LOVE TONKHAOW</title>
+
+  <!-- Tailwind CSS และฟอนต์ -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet" />
+
+  <!-- สไตล์ส่วนตัว -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- พื้นหลัง Vanta -->
+  <div id="vanta-bg"></div>
+
+  <!-- หน้าแรก -->
+  <section id="page1" class="min-h-screen flex flex-col items-center justify-center text-white space-y-6 text-center active">
+    <div class="glass max-w-xl fade-in-up">
+      <img src="https://via.placeholder.com/120" alt="Profile Image" class="rounded-full border-4 border-pink-400 mx-auto mb-4" />
+      <h1 class="text-4xl font-bold">สวัสดี! ผมชื่อ KOA</h1>
+      <p class="mt-2">หรือจะเรียกว่า <strong>บ่าวโก๊ะ</strong> ก็ได้ครับ 💗</p>
+      <button onclick="goToPage2()" class="mt-6 px-8 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-full shadow-lg transition-transform duration-300 hover:scale-105 focus:outline-none">ต่อไป</button>
+    </div>
+  </section>
+
+  <!-- หน้าที่สอง -->
+  <section id="page2" class="min-h-screen flex-col items-center justify-center text-white space-y-6 text-center hidden">
+    <button onclick="goBack()" class="bg-pink-500 px-8 py-3 rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300 focus:outline-none">← กลับ</button>
+    <h2 id="typing-text" class="glow-text text-5xl font-extrabold"></h2>
+    <p id="after-typing" class="text-xl opacity-0 transition-opacity duration-500 mt-4">ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ของผมนะครับ 💞</p>
+  </section>
+
+  <!-- สคริปต์ -->
+  <script src="vanta/three.r134.min.js"></script>
+  <script src="vanta/vanta.cells.min.js"></script>
+  <script src="vanta-init.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
